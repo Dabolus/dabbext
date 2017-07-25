@@ -10,7 +10,14 @@ To use it within Telegram, just type ```@DabbextBot <your message>``` and the bo
 - Ideographs
 - White circled text
 - Black circled text
+- White squared text
+- Black squared text
 - Parenthesized text
+- Fraktur
+- Script
+- Double-struck
+- Monospace
+- Braille
 
 ## Build and run
 Implying you have already Go set up and configured

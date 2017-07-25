@@ -39,21 +39,27 @@ func main() {
 		ideographsText,
 		whiteCirclesText,
 		blackCirclesText,
+		whiteSquaresText,
+		blackSquaresText,
 		parenthesisText,
 		frakturText,
 		scriptText,
 		doubleStruckText,
-		monospaceText :=
+		monospaceText,
+		brailleText :=
 			vaporwave(update.InlineQuery.Query),
 			zalgo(update.InlineQuery.Query),
 			ideographs(update.InlineQuery.Query),
 			whiteCircles(update.InlineQuery.Query),
 			blackCircles(update.InlineQuery.Query),
+			whiteSquares(update.InlineQuery.Query),
+			blackSquares(update.InlineQuery.Query),
 			parenthesis(update.InlineQuery.Query),
 			fraktur(update.InlineQuery.Query),
 			script(update.InlineQuery.Query),
 			doubleStruck(update.InlineQuery.Query),
-			monospace(update.InlineQuery.Query)
+			monospace(update.InlineQuery.Query),
+			braille(update.InlineQuery.Query)
 
 		inlineConf := tgbotapi.InlineConfig{
 			InlineQueryID: update.InlineQuery.ID,
@@ -65,11 +71,14 @@ func main() {
 				NewInlineQueryResultArticleDesc( "3", "工刀モ口ム尺丹ㄗ卄ち", ideographsText, ideographsText),
 				NewInlineQueryResultArticleDesc( "4", "Ⓦⓗⓘⓣⓔ ⓒⓘⓡⓒⓛⓔⓢ", whiteCirclesText, whiteCirclesText),
 				NewInlineQueryResultArticleDesc( "5", "🅑🅛🅐🅒🅚 🅒🅘🅡🅒🅛🅔🅢", blackCirclesText, blackCirclesText),
-				NewInlineQueryResultArticleDesc( "6", "🄟⒜⒭⒠⒩⒯⒣⒠⒮⒤⒮", parenthesisText, parenthesisText),
-				NewInlineQueryResultArticleDesc( "7", "𝕱𝖗𝖆𝖐𝖙𝖚𝖗", frakturText, frakturText),
-				NewInlineQueryResultArticleDesc( "8", "𝓢𝓬𝓻𝓲𝓹𝓽", scriptText, scriptText),
-				NewInlineQueryResultArticleDesc( "9", "𝔻𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜", doubleStruckText, doubleStruckText),
-				NewInlineQueryResultArticleDesc("10", "𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎", monospaceText, monospaceText),
+				NewInlineQueryResultArticleDesc( "6", "🅆🄷🄸🅃🄴 🅂🅀🅄🄰🅁🄴🅂", whiteSquaresText, whiteSquaresText),
+				NewInlineQueryResultArticleDesc( "7", "🆆🅷🅸🆃🅴 🆂🆀🆄🅰🆁🅴🆂", blackSquaresText, blackSquaresText),
+				NewInlineQueryResultArticleDesc( "8", "🄟⒜⒭⒠⒩⒯⒣⒠⒮⒤⒮", parenthesisText, parenthesisText),
+				NewInlineQueryResultArticleDesc( "9", "𝕱𝖗𝖆𝖐𝖙𝖚𝖗", frakturText, frakturText),
+				NewInlineQueryResultArticleDesc("10", "𝓢𝓬𝓻𝓲𝓹𝓽", scriptText, scriptText),
+				NewInlineQueryResultArticleDesc("11", "𝔻𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜", doubleStruckText, doubleStruckText),
+				NewInlineQueryResultArticleDesc("12", "𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎", monospaceText, monospaceText),
+				NewInlineQueryResultArticleDesc("13", "⠠⠃⠗⠁⠊⠇⠇⠑", brailleText, brailleText),
 			},
 		}
 
