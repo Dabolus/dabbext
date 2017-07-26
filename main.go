@@ -46,6 +46,12 @@ func main() {
 		scriptText,
 		doubleStruckText,
 		monospaceText,
+		underlineText,
+		overlineText,
+		strikethroughText,
+		dottedText,
+		triangledText,
+		deniedText,
 		brailleText :=
 			vaporwave(update.InlineQuery.Query),
 			zalgo(update.InlineQuery.Query),
@@ -59,6 +65,12 @@ func main() {
 			script(update.InlineQuery.Query),
 			doubleStruck(update.InlineQuery.Query),
 			monospace(update.InlineQuery.Query),
+			underline(update.InlineQuery.Query),
+			overline(update.InlineQuery.Query),
+			strikethrough(update.InlineQuery.Query),
+			dotted(update.InlineQuery.Query),
+			triangled(update.InlineQuery.Query),
+			denied(update.InlineQuery.Query),
 			braille(update.InlineQuery.Query)
 
 		inlineConf := tgbotapi.InlineConfig{
@@ -78,7 +90,13 @@ func main() {
 				NewInlineQueryResultArticleDesc("10", "𝓢𝓬𝓻𝓲𝓹𝓽", scriptText, scriptText),
 				NewInlineQueryResultArticleDesc("11", "𝔻𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜", doubleStruckText, doubleStruckText),
 				NewInlineQueryResultArticleDesc("12", "𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎", monospaceText, monospaceText),
-				NewInlineQueryResultArticleDesc("13", "⠠⠃⠗⠁⠊⠇⠇⠑", brailleText, brailleText),
+				NewInlineQueryResultArticleDesc("13", "U̲n̲d̲e̲r̲l̲i̲n̲e̲", underlineText, underlineText),
+				NewInlineQueryResultArticleDesc("14", "O̅v̅e̅r̅l̅i̅n̅e̅", overlineText, overlineText),
+				NewInlineQueryResultArticleDesc("15", "S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶", strikethroughText, strikethroughText),
+				NewInlineQueryResultArticleDesc("16", "Ḋȯṫṫėḋ", dottedText, dottedText),
+				NewInlineQueryResultArticleDesc("17", "T⃤r⃤i⃤a⃤n⃤g⃤l⃤e⃤d⃤", triangledText, triangledText),
+				NewInlineQueryResultArticleDesc("18", "D⃠e⃠n⃠i⃠e⃠d⃠", deniedText, deniedText),
+				NewInlineQueryResultArticleDesc("19", "⠠⠃⠗⠁⠊⠇⠇⠑", brailleText, brailleText),
 			},
 		}
 
