@@ -16,7 +16,14 @@ To use it within Telegram, just type ```@DabbextBot <your message>``` and the bo
 - Fraktur
 - Script
 - Double-struck
-- Monospace
+- Typewriter
+- Underline
+- Overline
+- Strikethrough
+- Dotted
+- Triangled
+- Denied
+- RIS (Regional Indicator Symbols)
 - Braille
 
 ## Build and run

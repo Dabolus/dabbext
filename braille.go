@@ -84,7 +84,7 @@ func braille(text string) string {
 		if val, ok := brailleTable[letter]; ok {
 			ret.WriteString(val)
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

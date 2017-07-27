@@ -74,18 +74,18 @@ func zalgo(text string) string {
 		}
 
 		// Add the normal character
-		ret.WriteString(string(letter))
+		ret.WriteRune(letter)
 
 		numUp, numMid, numDown := rand.Intn(16) / 2 + 1, rand.Intn(6) / 2, rand.Intn(16) / 2 + 1
 
 		for i := 0; i < numUp; i++ {
-			ret.WriteString(string(zalgoUp[rand.Intn(len(zalgoUp))]))
+			ret.WriteRune(zalgoUp[rand.Intn(len(zalgoUp))])
 		}
 		for i := 0; i < numMid; i++ {
-			ret.WriteString(string(zalgoMid[rand.Intn(len(zalgoMid))]))
+			ret.WriteRune(zalgoMid[rand.Intn(len(zalgoMid))])
 		}
 		for i := 0; i < numDown; i++ {
-			ret.WriteString(string(zalgoDown[rand.Intn(len(zalgoDown))]))
+			ret.WriteRune(zalgoDown[rand.Intn(len(zalgoDown))])
 		}
 	}
 

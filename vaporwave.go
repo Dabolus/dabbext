@@ -9,16 +9,16 @@ func vaporwave(text string) string {
 	for _, letter := range text {
 		// Normal letters range
 		if letter > 32 && letter < 127 {
-			ret.WriteString(string(letter + 65248))
+			ret.WriteRune(letter + 65248)
 		// Space
 		} else if letter == ' ' {
-			ret.WriteString("　")
+			ret.WriteRune('　')
 		// Special parenthesis
 		} else if letter == '⦅' || letter == '⦆' {
-			ret.WriteString(string(letter + 54746))
+			ret.WriteRune(letter + 54746)
 		// No full-width corresponding letter, just add the normal one
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

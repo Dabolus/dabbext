@@ -10,11 +10,11 @@ func fraktur(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(frakturLowerChars[letter-'a']))
+			ret.WriteRune(frakturLowerChars[letter-'a'])
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(frakturUpperChars[letter-'A']))
+			ret.WriteRune(frakturUpperChars[letter-'A'])
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 
