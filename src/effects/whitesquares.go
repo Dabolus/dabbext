@@ -9,11 +9,11 @@ func WhiteSquares(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(whiteSquaresChars[letter-'a']))
+			ret.WriteRune(whiteSquaresChars[letter-'a'])
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(whiteSquaresChars[letter-'A']))
+			ret.WriteRune(whiteSquaresChars[letter-'A'])
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

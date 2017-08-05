@@ -10,11 +10,11 @@ func DoubleStruck(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(doubleStruckLowerChars[letter-'a']))
+			ret.WriteRune(doubleStruckLowerChars[letter-'a'])
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(doubleStruckUpperChars[letter-'A']))
+			ret.WriteRune(doubleStruckUpperChars[letter-'A'])
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

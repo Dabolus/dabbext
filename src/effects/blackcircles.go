@@ -9,15 +9,15 @@ func BlackCircles(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(blackCirclesChars[letter - 'a']))
+			ret.WriteRune(blackCirclesChars[letter - 'a'])
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(blackCirclesChars[letter - 'A']))
+			ret.WriteRune(blackCirclesChars[letter - 'A'])
 		} else if letter >= '1' && letter <= '9' {
-			ret.WriteString(string(letter + 10073))
+			ret.WriteRune(letter + 10073)
 		} else if letter == '0' {
-			ret.WriteString("⓿")
+			ret.WriteRune('⓿')
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

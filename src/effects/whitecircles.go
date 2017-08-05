@@ -7,15 +7,15 @@ func WhiteCircles(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(letter + 9327))
+			ret.WriteRune(letter + 9327)
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(letter + 9333))
+			ret.WriteRune(letter + 9333)
 		} else if letter >= '1' && letter <= '9' {
-			ret.WriteString(string(letter + 10063))
+			ret.WriteRune(letter + 10063)
 		} else if letter == '0' {
-			ret.WriteString("⓪")
+			ret.WriteRune('⓪')
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

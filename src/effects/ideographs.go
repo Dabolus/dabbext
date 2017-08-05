@@ -9,11 +9,11 @@ func Ideographs(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(ideographChars[letter - 'a']))
+			ret.WriteRune(ideographChars[letter - 'a'])
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(ideographChars[letter - 'A']))
+			ret.WriteRune(ideographChars[letter - 'A'])
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 

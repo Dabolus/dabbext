@@ -10,11 +10,11 @@ func Script(text string) string {
 
 	for _, letter := range text {
 		if letter >= 'a' && letter <= 'z' {
-			ret.WriteString(string(scriptLowerChars[letter-'a']))
+			ret.WriteRune(scriptLowerChars[letter-'a'])
 		} else if letter >= 'A' && letter <= 'Z' {
-			ret.WriteString(string(scriptUpperChars[letter-'A']))
+			ret.WriteRune(scriptUpperChars[letter-'A'])
 		} else {
-			ret.WriteString(string(letter))
+			ret.WriteRune(letter)
 		}
 	}
 
