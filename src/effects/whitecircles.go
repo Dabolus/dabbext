@@ -1,8 +1,8 @@
-package main
+package effects
 
 import "bytes"
 
-func whiteCircles(text string) string {
+func WhiteCircles(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

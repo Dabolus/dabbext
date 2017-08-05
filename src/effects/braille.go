@@ -1,4 +1,4 @@
-package main
+package effects
 
 import "bytes"
 
@@ -77,7 +77,7 @@ var brailleTable = map[rune]string{
 	'\'': "⠄",
 }
 
-func braille(text string) string {
+func Braille(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

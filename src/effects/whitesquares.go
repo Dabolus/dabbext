@@ -1,10 +1,10 @@
-package main
+package effects
 
 import "bytes"
 
 var whiteSquaresChars = [...]rune{'🄰', '🄱', '🄲', '🄳', '🄴', '🄵', '🄶', '🄷', '🄸', '🄹', '🄺', '🄻', '🄼', '🄽', '🄾', '🄿', '🅀', '🅁', '🅂', '🅃', '🅄', '🅅', '🅆', '🅇', '🅈', '🅉', }
 
-func whiteSquares(text string) string {
+func WhiteSquares(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

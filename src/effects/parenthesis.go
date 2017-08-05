@@ -1,8 +1,8 @@
-package main
+package effects
 
 import "bytes"
 
-func parenthesis(text string) string {
+func Parenthesis(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

@@ -1,4 +1,4 @@
-package main
+package effects
 
 import (
 	"bytes"
@@ -64,7 +64,7 @@ func isZalgoChar(char rune) bool {
 }
 
 
-func zalgo(text string) string {
+func Zalgo(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

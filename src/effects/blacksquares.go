@@ -1,10 +1,10 @@
-package main
+package effects
 
 import "bytes"
 
 var blackSquaresChars = [...]rune{'🅰', '🅱', '🅲', '🅳', '🅴', '🅵', '🅶', '🅷', '🅸', '🅹', '🅺', '🅻', '🅼', '🅽', '🅾', '🅿', '🆀', '🆁', '🆂', '🆃', '🆄', '🆅', '🆆', '🆇', '🆈', '🆉', }
 
-func blackSquares(text string) string {
+func BlackSquares(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

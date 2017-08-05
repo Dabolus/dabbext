@@ -1,8 +1,8 @@
-package main
+package effects
 
 import "bytes"
 
-func vaporwave(text string) string {
+func Vaporwave(text string) string {
 	var ret bytes.Buffer
 
 	// Loop through each letter

@@ -1,10 +1,10 @@
-package main
+package effects
 
 import "bytes"
 
 var blackCirclesChars = [...]rune{'🅐', '🅑', '🅒', '🅓', '🅔', '🅕', '🅖', '🅗', '🅘', '🅙', '🅚', '🅛', '🅜', '🅝', '🅞', '🅟', '🅠', '🅡', '🅢', '🅣', '🅤', '🅥', '🅦', '🅧', '🅨', '🅩', }
 
-func blackCircles(text string) string {
+func BlackCircles(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {

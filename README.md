@@ -17,6 +17,12 @@ To use it within Telegram, just type ```@DabbextBot <your message>``` and the bo
 - Script
 - Double-struck
 - Monospace
+- Underline
+- Overline
+- Strikethrough
+- Dotted
+- Triangled
+- Denied
 - Braille
 
 ## Build and run

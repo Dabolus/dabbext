@@ -5,6 +5,7 @@ import (
 	"time"
 	"math/rand"
 	"github.com/go-telegram-bot-api/telegram-bot-api"
+	"effects"
 )
 
 func NewInlineQueryResultArticleDesc(id string, title string, messageText string, description string) tgbotapi.InlineQueryResultArticle {
@@ -53,25 +54,25 @@ func main() {
 		triangledText,
 		deniedText,
 		brailleText :=
-			vaporwave(update.InlineQuery.Query),
-			zalgo(update.InlineQuery.Query),
-			ideographs(update.InlineQuery.Query),
-			whiteCircles(update.InlineQuery.Query),
-			blackCircles(update.InlineQuery.Query),
-			whiteSquares(update.InlineQuery.Query),
-			blackSquares(update.InlineQuery.Query),
-			parenthesis(update.InlineQuery.Query),
-			fraktur(update.InlineQuery.Query),
-			script(update.InlineQuery.Query),
-			doubleStruck(update.InlineQuery.Query),
-			monospace(update.InlineQuery.Query),
-			underline(update.InlineQuery.Query),
-			overline(update.InlineQuery.Query),
-			strikethrough(update.InlineQuery.Query),
-			dotted(update.InlineQuery.Query),
-			triangled(update.InlineQuery.Query),
-			denied(update.InlineQuery.Query),
-			braille(update.InlineQuery.Query)
+			effects.Vaporwave(update.InlineQuery.Query),
+			effects.Zalgo(update.InlineQuery.Query),
+			effects.Ideographs(update.InlineQuery.Query),
+			effects.WhiteCircles(update.InlineQuery.Query),
+			effects.BlackCircles(update.InlineQuery.Query),
+			effects.WhiteSquares(update.InlineQuery.Query),
+			effects.BlackSquares(update.InlineQuery.Query),
+			effects.Parenthesis(update.InlineQuery.Query),
+			effects.Fraktur(update.InlineQuery.Query),
+			effects.Script(update.InlineQuery.Query),
+			effects.DoubleStruck(update.InlineQuery.Query),
+			effects.Monospace(update.InlineQuery.Query),
+			effects.Underline(update.InlineQuery.Query),
+			effects.Overline(update.InlineQuery.Query),
+			effects.Strikethrough(update.InlineQuery.Query),
+			effects.Dotted(update.InlineQuery.Query),
+			effects.Triangled(update.InlineQuery.Query),
+			effects.Denied(update.InlineQuery.Query),
+			effects.Braille(update.InlineQuery.Query)
 
 		inlineConf := tgbotapi.InlineConfig{
 			InlineQueryID: update.InlineQuery.ID,

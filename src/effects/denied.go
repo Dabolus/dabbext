@@ -1,8 +1,8 @@
-package main
+package effects
 
 import "bytes"
 
-func denied(text string) string {
+func Denied(text string) string {
 	var ret bytes.Buffer
 
 	for _, letter := range text {
